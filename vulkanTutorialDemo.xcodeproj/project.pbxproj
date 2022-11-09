@@ -8,23 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		C84ECAE5291BF6CF00DD5CBF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C84ECAE4291BF6CF00DD5CBF /* main.cpp */; };
+		C84ECAF9291BFCE900DD5CBF /* libvulkan.1.2.182.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C84ECAF8291BFCE900DD5CBF /* libvulkan.1.2.182.dylib */; };
+		C84ECAFB291BFCF600DD5CBF /* libvulkan.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C84ECAFA291BFCF600DD5CBF /* libvulkan.1.dylib */; };
+		C87AC6D4291C042200010CC6 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C87AC6D3291C042200010CC6 /* libglfw.3.3.dylib */; };
+		C87AC6D5291C048100010CC6 /* libglfw.3.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C87AC6D3291C042200010CC6 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C87AC6D6291C048100010CC6 /* libvulkan.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C84ECAFA291BFCF600DD5CBF /* libvulkan.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C87AC6D7291C048100010CC6 /* libvulkan.1.2.182.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C84ECAF8291BFCE900DD5CBF /* libvulkan.1.2.182.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C84ECADF291BF6CF00DD5CBF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				C87AC6D5291C048100010CC6 /* libglfw.3.3.dylib in CopyFiles */,
+				C87AC6D6291C048100010CC6 /* libvulkan.1.dylib in CopyFiles */,
+				C87AC6D7291C048100010CC6 /* libvulkan.1.2.182.dylib in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C84ECAE1291BF6CF00DD5CBF /* vulkanTutorialDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vulkanTutorialDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84ECAE4291BF6CF00DD5CBF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C84ECAF8291BFCE900DD5CBF /* libvulkan.1.2.182.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.2.182.dylib; path = ../../../../VulkanSDK/1.2.182.0/macOS/lib/libvulkan.1.2.182.dylib; sourceTree = "<group>"; };
+		C84ECAFA291BFCF600DD5CBF /* libvulkan.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.dylib; path = ../../../../VulkanSDK/1.2.182.0/macOS/lib/libvulkan.1.dylib; sourceTree = "<group>"; };
+		C87AC6D3291C042200010CC6 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.6/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87AC6D4291C042200010CC6 /* libglfw.3.3.dylib in Frameworks */,
+				C84ECAFB291BFCF600DD5CBF /* libvulkan.1.dylib in Frameworks */,
+				C84ECAF9291BFCE900DD5CBF /* libvulkan.1.2.182.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +58,7 @@
 			children = (
 				C84ECAE3291BF6CF00DD5CBF /* vulkanTutorialDemo */,
 				C84ECAE2291BF6CF00DD5CBF /* Products */,
+				C84ECAF7291BFCE900DD5CBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +76,16 @@
 				C84ECAE4291BF6CF00DD5CBF /* main.cpp */,
 			);
 			path = vulkanTutorialDemo;
+			sourceTree = "<group>";
+		};
+		C84ECAF7291BFCE900DD5CBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C87AC6D3291C042200010CC6 /* libglfw.3.3.dylib */,
+				C84ECAFA291BFCF600DD5CBF /* libvulkan.1.dylib */,
+				C84ECAF8291BFCE900DD5CBF /* libvulkan.1.2.182.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +266,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Users/xuyanbing1/VulkanSDK/1.2.182.0/macOS/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Users/xuyanbing1/VulkanSDK/1.2.182.0/macOS/lib,
+					/usr/local/Cellar/glfw/3.3.6/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +283,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Users/xuyanbing1/VulkanSDK/1.2.182.0/macOS/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Users/xuyanbing1/VulkanSDK/1.2.182.0/macOS/lib,
+					/usr/local/Cellar/glfw/3.3.6/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
